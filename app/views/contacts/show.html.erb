@@ -1,12 +1,14 @@
-<h1><%= @contact.first_name %></h1>
-<h1><%= @contact.last_name %></h1>
+<div class="details">
+<h2><%= @contact.first_name %></h2>
+<h2><%= @contact.last_name %></h2>
 <p><%= @contact.phone_number %></p>
 <p><%= @contact.email %></p>
 <p><%= @contact.company_name %></p>
 <p><%= @contact.birth_date %></p>
 <p><%= @contact.address %></p>
-<ul>
-  <li><%= link_to "Edit", edit_contact_path(@contact) %></li>
-  <li><%= link_to "Delete", contact_path(@contact),
-  method: :delete, data: {confirm: "Are you sure?" } %></li>
-</ul>
+
+  <%= link_to "Edit", edit_contact_path(@contact) %>
+  <%= link_to "Delete", contact_path(@contact),
+  method: :delete, data: {confirm: "Are you sure?" } %>
+
+</div>
