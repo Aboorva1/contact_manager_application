@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, except: %i[home]
   def index
     @contacts = Contact.all
+    # @contacts = Contact.paginate(:page => params[:page], per_page: 2)
   end
 
   def show
@@ -46,6 +47,6 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address)
+    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address, :image)
   end
 end

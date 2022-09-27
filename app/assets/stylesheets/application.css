@@ -21,7 +21,7 @@
 
 h1{
 
-    color: blueviolet;
+    color: blue;
     font-family: Georgia, serif;
     text-align:center;
 }
@@ -38,17 +38,18 @@ h2{
 }
 
 .details{
-    text-align:center;
+    /* text-align:center; */
     font-size: large;
 }
 .wrap{
     /* justify-content: center; */
+    margin: 50px;
     align-items: center;
     min-height: 100vh;
     border-radius: 5px;
     width: 400px;
-    background: gray;
-  padding: 25px;
+    background: skyblue;
+  padding: 5px;
 }
 .form label {
     cursor: pointer;
@@ -56,11 +57,11 @@ h2{
     font-size: 17px;
 }
 .form input {
-    color: dodgerblue;
+    color: black;
     font-weight: bold;
     font-size: 15px;
     padding: 5px;
-    border: 2px solid #999;
+    border: 2px solid teal;
     border-radius: 6px 6px 6px 6px;
 }
 .form area{
@@ -71,4 +72,18 @@ h2{
     font-size: 25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.img-circular{
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    display: block;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+   }
 

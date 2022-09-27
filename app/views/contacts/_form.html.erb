@@ -57,6 +57,11 @@
   </div>
 
   <div>
+    <p><%= form.label :image%>
+    <%= form.file_field :image%></p>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <li><%= link_to "Home",root_path(@contact) %></li>

@@ -6,4 +6,5 @@ class Contact < ApplicationRecord
     validates :company_name, presence: true
     validates :birth_date, presence: true
     validates :address, presence: true
+    has_one_attached :image
 end
