@@ -6,7 +6,7 @@ class CreateContacts < ActiveRecord::Migration[6.1]
       t.integer :phone_number
       t.string :email
       t.string :company_name
-      t.string :birth_date
+      t.date :birth_date
       t.text :address
 
       t.timestamps

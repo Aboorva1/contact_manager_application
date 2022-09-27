@@ -42,7 +42,7 @@
 
   <div>
     <%= form.label :birth_date %><br>
-    <%= form.text_field :birth_date %>
+    <%= form.date_field :birth_date %>
     <% @contact.errors.full_messages_for(:birth_date).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -50,7 +50,7 @@
 
   <div>
     <%= form.label :address %><br>
-    <%= form.text_field :address %>
+    <%= form.text_area :address %>
     <% @contact.errors.full_messages_for(:address).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -59,6 +59,6 @@
   <div>
     <%= form.submit %>
   </div>
-
+<li><%= link_to "Home",root_path(@contact) %></li>
 <% end %>
 </div>

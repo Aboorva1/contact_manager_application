@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+
+  before_action :authenticate_user!, except: %i[home]
   def index
     @contacts = Contact.all
   end
