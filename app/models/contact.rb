@@ -7,4 +7,5 @@ class Contact < ApplicationRecord
     validates :birth_date, presence: true
     validates :address, presence: true
     has_one_attached :image
+    paginates_per 2
 end
