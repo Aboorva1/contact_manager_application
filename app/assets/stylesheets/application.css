@@ -38,18 +38,18 @@ h2{
 }
 
 .details{
-    /* text-align:center; */
+    text-align:center;
     font-size: large;
 }
 .wrap{
-    /* justify-content: center; */
-    margin: 50px;
+    
+    margin-left: 250px;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     border-radius: 5px;
     width: 400px;
     background: skyblue;
-  padding: 5px;
+    padding: 5px;
 }
 .form label {
     cursor: pointer;
@@ -97,5 +97,13 @@ h2{
 }
 .page a:hover{
     text-shadow: 1px 1px 1px #171717;
+}
+
+.navbar-link{
+    font-size: 20px;
+    float: right;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 
