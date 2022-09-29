@@ -1,21 +1,22 @@
-<div class="details">
-
-<h2><%= @contact.first_name %></h2>
-<h2><%= @contact.last_name %></h2>
-<p><%= @contact.phone_number %></p>
-<p><%= @contact.email %></p>
-<p><%= @contact.company_name %></p>
-<p><%= @contact.birth_date %></p>
-<p><%= @contact.address %></p>
 
 <%if @contact.image.attached?%>
    <p><%= image_tag(@contact.image,:class=> "img-circular") %></p>
 <%else%>
-   <img class= "img-circular" src ="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+   <img class= "img-circular" src ="https://pic.onlinewebfonts.com/svg/img_162044.png">
 <%end%>
-  <%= link_to "Edit", edit_contact_path(@contact) %>
-  <%= link_to "Delete", contact_path(@contact),
+<div class="details">
+<h2><%= @contact.first_name %></h2>
+<h2><%= @contact.last_name %></h2>
+<p><b>Phone Number: </b><%= @contact.phone_number %></p>
+<p><b>Mail: </b><%= @contact.email %></p>
+<p><b>Company name: </b><%= @contact.company_name %></p>
+<p><b>DOB: </b><%= @contact.birth_date %></p>
+<p><b>Address :</b><%= @contact.address %></p>
+
+
+  <%= link_to "<button>Edit</button>".html_safe, edit_contact_path(@contact) %>
+  <%= link_to "<button>Delete</button>".html_safe, contact_path(@contact),
   method: :delete, data: {confirm: "Are you sure?" } %>
-  <li><%= link_to "Home",root_path(@contact) %></li>
+  <p><%= link_to "<button>Home</button>".html_safe,root_path(@contact) %><p>
 
 </div>

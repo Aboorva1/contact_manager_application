@@ -64,6 +64,6 @@
   <div>
     <%= form.submit %>
   </div>
-<li><%= link_to "Home",root_path(@contact) %></li>
+<li><%= link_to "Home".html_safe,root_path(@contact) %></li>
 <% end %>
 </div>

@@ -3,14 +3,23 @@
 <div class="index">
 <ul>
   <% @contacts.each do |contact| %>
+  <table>
     <li>
+       <%if contact.image.attached?%>
+          <p><%= image_tag(contact.image,:class=> "img") %></p>
+       <%else%>
+         <img class= "img" src ="https://pic.onlinewebfonts.com/svg/img_162044.png">
+       <%end%>
        <%= link_to contact.first_name, contact %>
+      
     </li>
+    </table>
   <% end %>
 </ul>
 
 <%= link_to "New Contact", new_contact_path %>
 </div>
-<div class="page">
+
 <%= paginate @contacts %> 
-</div>
+
+
